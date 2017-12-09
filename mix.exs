@@ -5,7 +5,7 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
     [
       app: :phoenix_intercooler_tutorial,
       version: "0.0.1",
-      elixir: "~> 1.4",
+      elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
@@ -54,7 +54,9 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      "test": ["ecto.create --quiet", "ecto.migrate", "test"]
+      "test": ["ecto.create --quiet", "ecto.migrate", "test"],
+      "s": ["phx.server"],
+      "r": ["phx.routes"]
     ]
   end
 end
