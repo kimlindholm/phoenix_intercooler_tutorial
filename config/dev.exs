@@ -52,7 +52,7 @@ config :phoenix, :stacktrace_depth, 20
 config :phoenix_intercooler_tutorial, PhoenixIntercoolerTutorial.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  # password: "postgres",
   database: "phoenix_intercooler_tutorial_dev",
   hostname: "localhost",
   pool_size: 10

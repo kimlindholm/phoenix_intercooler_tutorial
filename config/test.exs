@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :phoenix_intercooler_tutorial, PhoenixIntercoolerTutorial.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  # password: "postgres",
   database: "phoenix_intercooler_tutorial_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
