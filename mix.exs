@@ -9,7 +9,8 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
-      preferred_cli_env: [espec: :test],
+      test_coverage: [tool: ExCoveralls, test_task: "espec"],
+      preferred_cli_env: [espec: :test, "coveralls": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test],
       aliases: aliases(),
       deps: deps()
     ]
@@ -46,6 +47,8 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
       # Tests
       {:espec_phoenix, "~> 0.6.9", only: :test},
+      # Test coverage reports
+      {:excoveralls, "~> 0.7", only: :test},
 
       {:cowboy, "~> 1.0"}
     ]
@@ -63,7 +66,8 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       "test": ["ecto.create --quiet", "ecto.migrate", "test"],
       "s": ["phx.server"],
-      "r": ["phx.routes"]
+      "r": ["phx.routes"],
+      "cov": ["cmd mix coveralls.html"]
     ]
   end
 end

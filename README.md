@@ -16,6 +16,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 ### Command Line
 
 * Run tests: `$ mix espec`
+* Test coverage report: `$ mix cov`
 * Interactive shell: `$ iex -S mix` (exit by pressing Ctrl+C twice)
 
 ## Learn more
