@@ -11,6 +11,13 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
+## Development
+
+### Command Line
+
+* Run tests: `$ mix espec`
+* Interactive shell: `$ iex -S mix` (exit by pressing Ctrl+C twice)
+
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/
