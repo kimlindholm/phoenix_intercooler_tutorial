@@ -9,6 +9,7 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
+      preferred_cli_env: [espec: :test],
       aliases: aliases(),
       deps: deps()
     ]
@@ -40,7 +41,12 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
+
+      # Code analysis
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
+      # Tests
+      {:espec_phoenix, "~> 0.6.9", only: :test},
+
       {:cowboy, "~> 1.0"}
     ]
   end
