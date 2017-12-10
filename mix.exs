@@ -65,6 +65,7 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       "test": ["ecto.create --quiet", "ecto.migrate", "test"],
+      "espec": ["ecto.create --quiet", "ecto.migrate", "espec"],
       "s": ["phx.server"],
       "r": ["phx.routes"],
       "cov": ["cmd mix coveralls.html"]
