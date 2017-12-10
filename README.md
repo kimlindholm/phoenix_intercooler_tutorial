@@ -1,5 +1,6 @@
 # PhoenixIntercoolerTutorial
 
+[![CircleCI](https://circleci.com/gh/kimlindholm/phoenix_intercooler_tutorial/tree/integration_tests.svg?style=shield)](https://circleci.com/gh/kimlindholm/phoenix_intercooler_tutorial/tree/integration_tests)
 [![Coverage Status](https://coveralls.io/repos/github/kimlindholm/phoenix_intercooler_tutorial/badge.svg?branch=integration_tests)](https://coveralls.io/github/kimlindholm/phoenix_intercooler_tutorial?branch=integration_tests)
 
 To start your Phoenix server:
