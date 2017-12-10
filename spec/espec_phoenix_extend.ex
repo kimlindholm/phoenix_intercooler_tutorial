@@ -16,6 +16,7 @@ defmodule ESpec.Phoenix.Extend do
       import PhoenixIntercoolerTutorialWeb.Router.Helpers
 
       use Hound.Helpers
+      import PhoenixIntercoolerTutorial.Hound.CustomHelpers
 
       before do
         metadata = Phoenix.Ecto.SQL.Sandbox.metadata_for(
