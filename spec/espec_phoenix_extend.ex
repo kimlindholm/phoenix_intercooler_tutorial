@@ -18,7 +18,19 @@ defmodule ESpec.Phoenix.Extend do
       use Hound.Helpers
 
       before do
-        Hound.start_session()
+        metadata = Phoenix.Ecto.SQL.Sandbox.metadata_for(
+          PhoenixIntercoolerTutorial.Repo,
+          self()
+        )
+        Hound.start_session(
+          additional_capabilities: %{
+            chromeOptions: %{ "args" => [
+              "--user-agent=#{Hound.Browser.user_agent(:chrome) |> Hound.Metadata.append(metadata)}",
+              "--headless",
+              "--disable-gpu"
+            ]}
+          }
+        )
       end
 
       finally do
