@@ -22,10 +22,11 @@ defmodule ESpec.Phoenix.Extend do
           PhoenixIntercoolerTutorial.Repo,
           self()
         )
+        user_agent = Hound.Browser.user_agent(:chrome)
         Hound.start_session(
           additional_capabilities: %{
-            chromeOptions: %{ "args" => [
-              "--user-agent=#{Hound.Browser.user_agent(:chrome) |> Hound.Metadata.append(metadata)}",
+            chromeOptions: %{"args" => [
+              "--user-agent=#{Hound.Metadata.append(user_agent, metadata)}",
               "--headless",
               "--disable-gpu"
             ]}
