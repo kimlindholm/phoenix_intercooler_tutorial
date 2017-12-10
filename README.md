@@ -16,6 +16,9 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 ## Development
 
+* Install [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) (e.g. `brew install chromedriver`)
+* Before running tests, start ChromeDriver with `chromedriver` or run as a service with `brew services start chromedriver` (MacOS)
+
 ### Command Line
 
 * Run tests: `$ mix espec`

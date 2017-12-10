@@ -49,6 +49,8 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       {:espec_phoenix, "~> 0.6.9", only: :test},
       # Test coverage reports
       {:excoveralls, "~> 0.7", only: :test},
+      # Integration tests
+      {:hound, "~> 1.0"},
 
       {:cowboy, "~> 1.0"}
     ]

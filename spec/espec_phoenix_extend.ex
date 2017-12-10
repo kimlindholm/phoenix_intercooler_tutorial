@@ -15,6 +15,17 @@ defmodule ESpec.Phoenix.Extend do
       alias PhoenixIntercoolerTutorial
       import PhoenixIntercoolerTutorialWeb.Router.Helpers
 
+      use Hound.Helpers
+
+      before do
+        Hound.start_session()
+      end
+
+      finally do
+        delete_cookies()
+        Hound.end_session()
+      end
+
       @endpoint PhoenixIntercoolerTutorialWeb.Endpoint
     end
   end
