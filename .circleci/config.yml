@@ -19,3 +19,4 @@ jobs:
       - run: mix coveralls.circle
       - store_artifacts:
           path: screenshots
+          destination: screenshots
