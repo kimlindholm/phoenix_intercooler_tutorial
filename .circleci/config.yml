@@ -17,3 +17,5 @@ jobs:
       - run: mix deps.get
       - run: mix espec
       - run: mix coveralls.circle
+      - store_artifacts:
+          path: screenshots
