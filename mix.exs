@@ -9,6 +9,7 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
+      preferred_cli_env: [espec: :test, "es": :test, "es.feat": :test, "es.all": :test],
       aliases: aliases(),
       deps: deps()
     ]
@@ -25,7 +26,7 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(:test), do: ["lib", "test/support", "spec/support"]
   defp elixirc_paths(_),     do: ["lib"]
 
   # Specifies your project dependencies.
@@ -60,7 +61,11 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      "test": ["ecto.create --quiet", "ecto.migrate", "test"],
+      "test": [],
+      "espec": ["ecto.create --quiet", "ecto.migrate", "espec"],
+      "es": ["espec --exclude feature"],
+      "es.feat": ["espec --only feature"],
+      "es.all": ["espec"],
       "s": ["phx.server"],
       "r": ["phx.routes"]
     ]

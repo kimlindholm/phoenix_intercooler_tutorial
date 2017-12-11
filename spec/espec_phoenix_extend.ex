@@ -1,4 +1,9 @@
 defmodule ESpec.Phoenix.Extend do
+
+  @moduledoc """
+  Use this module to import or alias additional modules in your specs.
+  """
+
   def model do
     quote do
       alias PhoenixIntercoolerTutorial.Repo
@@ -8,15 +13,15 @@ defmodule ESpec.Phoenix.Extend do
   def controller do
     quote do
       alias PhoenixIntercoolerTutorial
-      import PhoenixIntercoolerTutorial.Router.Helpers
+      import PhoenixIntercoolerTutorialWeb.Router.Helpers
 
-      @endpoint PhoenixIntercoolerTutorial.Endpoint
+      @endpoint PhoenixIntercoolerTutorialWeb.Endpoint
     end
   end
 
   def view do
     quote do
-      import PhoenixIntercoolerTutorial.Router.Helpers
+      import PhoenixIntercoolerTutorialWeb.Router.Helpers
     end
   end
 
@@ -24,7 +29,7 @@ defmodule ESpec.Phoenix.Extend do
     quote do
       alias PhoenixIntercoolerTutorial.Repo
 
-      @endpoint PhoenixIntercoolerTutorial.Endpoint
+      @endpoint PhoenixIntercoolerTutorialWeb.Endpoint
     end
   end
 
