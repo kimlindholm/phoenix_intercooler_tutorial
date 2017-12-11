@@ -10,7 +10,7 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
       test_coverage: [tool: ExCoveralls, test_task: "espec"],
-      preferred_cli_env: [espec: :test, "coveralls": :test, "coveralls.circle": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test],
+      preferred_cli_env: [espec: :test, "es": :test, "es.feat": :test, "es.all": :test, "coveralls": :test, "coveralls.circle": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test],
       aliases: aliases(),
       deps: deps()
     ]
@@ -68,6 +68,9 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       "test": [],
       "espec": ["ecto.create --quiet", "ecto.migrate", "espec"],
+      "es": ["espec --exclude feature"],
+      "es.feat": ["espec --only feature"],
+      "es.all": ["espec"],
       "s": ["phx.server"],
       "r": ["phx.routes"],
       "cov": ["cmd mix coveralls.html"]

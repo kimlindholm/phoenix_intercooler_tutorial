@@ -15,7 +15,8 @@ jobs:
       - run: mix local.rebar --force
       - run: mix local.hex --force
       - run: mix deps.get
-      - run: mix espec
+      - run: mix espec --exclude feature
+      - run: mix espec --only feature
       - run: mix coveralls.circle
       - store_artifacts:
           path: screenshots
