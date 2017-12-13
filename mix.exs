@@ -10,7 +10,7 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
       start_permanent: Mix.env == :prod,
       test_coverage: [tool: ExCoveralls, test_task: "espec"],
-      preferred_cli_env: [espec: :test, "es": :test, "es.feat": :test, "es.all": :test, cov: :test, "coveralls": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test],
+      preferred_cli_env: [espec: :test, "es": :test, "es.feat": :test, "es.all": :test, cov: :test, "coveralls": :test, "coveralls.circle": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test],
       aliases: aliases(),
       deps: deps()
     ]
