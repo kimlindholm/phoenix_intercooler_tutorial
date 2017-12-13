@@ -5,6 +5,7 @@ defmodule PhoenixIntercoolerTutorial.ExampleFeatureSpec do
     it "visits main page" do
       navigate_to("/")
       expect(visible_page_text()).to match "Welcome"
+      save_screenshot "Main page"
     end
   end
 
