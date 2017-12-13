@@ -43,8 +43,12 @@ Some tools need to be installed globally:
 
     $ mix archive.install hex sobelow
     $ gem install scss-lint
+    $ brew install chromedriver         # MacOS
+    $ brew services start chromedriver  # MacOS
 
 #### Testing
+
+Before running tests, verify that [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) is running and that you're using Chrome 59 or later in order to run headless tests.
 
 - Run all tests: `$ mix espec` (same as `$ mix es.all`)
 - Run tests other than feature tests: `$ mix es`
