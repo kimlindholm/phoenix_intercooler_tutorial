@@ -49,6 +49,9 @@ Some tools need to be installed globally:
 - Run all tests: `$ mix espec` (same as `$ mix es.all`)
 - Run tests other than feature tests: `$ mix es`
 - Run feature tests: `$ mix es.feat`
+- Test coverage report: `$ mix cov`
+
+Test coverage report is in file `cover/excoveralls.html`.
 
 #### Code Analysis
 

@@ -1,0 +1,11 @@
+{
+  "skip_files": [
+    "lib/tasks",
+    "test/support",
+    "spec/support",
+    "web/views/error_helpers.ex"
+  ],
+  "terminal_options": {
+    "file_column_width": 60
+  }
+}
