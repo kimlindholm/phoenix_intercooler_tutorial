@@ -1,6 +1,7 @@
 # Phoenix + Intercooler Tutorial
 
 [![CircleCI](https://circleci.com/gh/kimlindholm/phoenix_intercooler_tutorial/tree/master.svg?style=shield)](https://circleci.com/gh/kimlindholm/phoenix_intercooler_tutorial/tree/master)
+[![Coverage Status](https://coveralls.io/repos/github/kimlindholm/phoenix_intercooler_tutorial/badge.svg?branch=master)](https://coveralls.io/github/kimlindholm/phoenix_intercooler_tutorial?branch=master)
 [![Ebert](https://ebertapp.io/github/kimlindholm/phoenix_intercooler_tutorial.svg)](https://ebertapp.io/github/kimlindholm/phoenix_intercooler_tutorial)
 
 > Tutorial and demo app
