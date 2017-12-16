@@ -7,6 +7,7 @@ defmodule ESpec.Phoenix.Extend do
   def model do
     quote do
       alias PhoenixIntercoolerTutorial.Repo
+      import PhoenixIntercoolerTutorial.Factories.Factory
     end
   end
 
@@ -14,6 +15,7 @@ defmodule ESpec.Phoenix.Extend do
     quote do
       alias PhoenixIntercoolerTutorial
       import PhoenixIntercoolerTutorialWeb.Router.Helpers
+      import PhoenixIntercoolerTutorial.Factories.Factory
 
       use Hound.Helpers
       import PhoenixIntercoolerTutorial.Hound.CustomHelpers

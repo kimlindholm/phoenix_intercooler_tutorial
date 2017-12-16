@@ -51,6 +51,8 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       {:excoveralls, "~> 0.7", only: :test},
       # Integration tests
       {:hound, "~> 1.0"},
+      # Factories
+      {:ex_machina, "~> 2.1", only: :test},
 
       {:cowboy, "~> 1.0"}
     ]
