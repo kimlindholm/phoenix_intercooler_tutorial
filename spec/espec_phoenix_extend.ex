@@ -8,6 +8,7 @@ defmodule ESpec.Phoenix.Extend do
     quote do
       alias PhoenixIntercoolerTutorial.Repo
       import PhoenixIntercoolerTutorial.Factories.Factory
+      import PhoenixIntercoolerTutorial.ESpec.CustomHelpers
     end
   end
 
