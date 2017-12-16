@@ -53,6 +53,8 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
       {:hound, "~> 1.0"},
       # Factories
       {:ex_machina, "~> 2.1", only: :test},
+      # Fake data for tests
+      {:faker, "~> 0.9", only: :test},
 
       {:cowboy, "~> 1.0"}
     ]
