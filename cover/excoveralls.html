@@ -367,6 +367,28 @@ function find(y) {
           </li>
         
           <li>
+            <span class='cov high'>100</span>
+            <a href='#lib/phoenix_intercooler_tutorial/announcements/announcement.ex'>
+              
+              
+                <span class='dirname'>lib/phoenix_intercooler_tutorial/announcements/</span>
+              
+              <span class='basename'>announcement.ex</span>
+            </a>
+          </li>
+        
+          <li>
+            <span class='cov terrible'>0</span>
+            <a href='#lib/phoenix_intercooler_tutorial/announcements/announcements.ex'>
+              
+              
+                <span class='dirname'>lib/phoenix_intercooler_tutorial/announcements/</span>
+              
+              <span class='basename'>announcements.ex</span>
+            </a>
+          </li>
+        
+          <li>
             <span class='cov high'>75</span>
             <a href='#lib/phoenix_intercooler_tutorial/application.ex'>
               
@@ -489,11 +511,11 @@ function find(y) {
         
       </div>
 
-      <div id='stats' class='medium'>
-        <div class='percentage'>54.5</div>
-        <div class='sloc'>11</div>
-        <div class='hits'>6</div>
-        <div class='misses'>5</div>
+      <div id='stats' class='low'>
+        <div class='percentage'>42.1</div>
+        <div class='sloc'>19</div>
+        <div class='hits'>11</div>
+        <div class='misses'>11</div>
       </div>
       <div id='files'>
         
@@ -581,6 +603,1056 @@ function find(y) {
                   
                       <tr>
                         <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/phoenix_intercooler_tutorial/announcements/announcement.ex'>lib/phoenix_intercooler_tutorial/announcements/announcement.ex</h1>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
+              <div class='sloc'>2</div>
+              <div class='hits'>5</div>
+              <div class='misses'>0</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule PhoenixIntercoolerTutorial.Announcements.Announcement do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  use Ecto.Schema</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>  import Ecto.Changeset</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'>  alias __MODULE__</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @moduledoc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'>  The Announcement schema.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>7</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>9</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>  schema &quot;announcements&quot; do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :content, :string</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>11</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>12</td>
+                        <td class='hits'></td>
+                        <td class='source'>    timestamps()</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>14</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc false</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>16</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def changeset(%Announcement{} = announcement, attrs) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>17</td>
+                        <td class='hits'></td>
+                        <td class='source'>    announcement</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>18</td>
+                        <td class='hits'></td>
+                        <td class='source'>    |&gt; cast(attrs, [:content])</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>19</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>    |&gt; validate_required([:content])</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>20</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>21</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/phoenix_intercooler_tutorial/announcements/announcements.ex'>lib/phoenix_intercooler_tutorial/announcements/announcements.ex</h1>
+            <div id='stats' class='terrible'>
+              <div class='percentage'>0</div>
+              <div class='sloc'>6</div>
+              <div class='hits'>0</div>
+              <div class='misses'>6</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule PhoenixIntercoolerTutorial.Announcements do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @moduledoc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>  The Announcements context.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'>  import Ecto.Query, warn: false</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'>  alias PhoenixIntercoolerTutorial.Repo</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>7</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'>  alias PhoenixIntercoolerTutorial.Announcements.Announcement</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>9</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>11</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Returns the list of announcements.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>12</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'>  ## Examples</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>14</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>      iex&gt; list_announcements()</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>16</td>
+                        <td class='hits'></td>
+                        <td class='source'>      [%Announcement{}, ...]</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>17</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>18</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>19</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def list_announcements do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>20</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>    Repo.all(Announcement)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>21</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>22</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>23</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>24</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Gets a single announcement.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>25</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>26</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Raises `Ecto.NoResultsError` if the Announcement does not exist.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>27</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>28</td>
+                        <td class='hits'></td>
+                        <td class='source'>  ## Examples</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>29</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>30</td>
+                        <td class='hits'></td>
+                        <td class='source'>      iex&gt; get_announcement!(123)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>31</td>
+                        <td class='hits'></td>
+                        <td class='source'>      %Announcement{}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>32</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>33</td>
+                        <td class='hits'></td>
+                        <td class='source'>      iex&gt; get_announcement!(456)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>34</td>
+                        <td class='hits'></td>
+                        <td class='source'>      ** (Ecto.NoResultsError)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>35</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>36</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>37</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>  def get_announcement!(id), do: Repo.get!(Announcement, id)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>38</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>39</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>40</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Creates a announcement.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>41</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>42</td>
+                        <td class='hits'></td>
+                        <td class='source'>  ## Examples</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>43</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>44</td>
+                        <td class='hits'></td>
+                        <td class='source'>      iex&gt; create_announcement(%{field: value})</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>45</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:ok, %Announcement{}}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>46</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>47</td>
+                        <td class='hits'></td>
+                        <td class='source'>      iex&gt; create_announcement(%{field: bad_value})</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>48</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:error, %Ecto.Changeset{}}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>49</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>50</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>51</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def create_announcement(attrs \\ %{}) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>52</td>
+                        <td class='hits'></td>
+                        <td class='source'>    %Announcement{}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>53</td>
+                        <td class='hits'></td>
+                        <td class='source'>    |&gt; Announcement.changeset(attrs)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>54</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>    |&gt; Repo.insert()</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>55</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>56</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>57</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>58</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Updates a announcement.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>59</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>60</td>
+                        <td class='hits'></td>
+                        <td class='source'>  ## Examples</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>61</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>62</td>
+                        <td class='hits'></td>
+                        <td class='source'>      iex&gt; update_announcement(announcement, %{field: new_value})</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>63</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:ok, %Announcement{}}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>64</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>65</td>
+                        <td class='hits'></td>
+                        <td class='source'>      iex&gt; update_announcement(announcement, %{field: bad_value})</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>66</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:error, %Ecto.Changeset{}}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>67</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>68</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>69</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def update_announcement(%Announcement{} = announcement, attrs) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>70</td>
+                        <td class='hits'></td>
+                        <td class='source'>    announcement</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>71</td>
+                        <td class='hits'></td>
+                        <td class='source'>    |&gt; Announcement.changeset(attrs)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>72</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>    |&gt; Repo.update()</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>73</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>74</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>75</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>76</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Deletes a Announcement.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>77</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>78</td>
+                        <td class='hits'></td>
+                        <td class='source'>  ## Examples</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>79</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>80</td>
+                        <td class='hits'></td>
+                        <td class='source'>      iex&gt; delete_announcement(announcement)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>81</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:ok, %Announcement{}}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>82</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>83</td>
+                        <td class='hits'></td>
+                        <td class='source'>      iex&gt; delete_announcement(announcement)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>84</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:error, %Ecto.Changeset{}}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>85</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>86</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>87</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def delete_announcement(%Announcement{} = announcement) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>88</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>    Repo.delete(announcement)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>89</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>90</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>91</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>92</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Returns an `%Ecto.Changeset{}` for tracking announcement changes.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>93</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>94</td>
+                        <td class='hits'></td>
+                        <td class='source'>  ## Examples</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>95</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>96</td>
+                        <td class='hits'></td>
+                        <td class='source'>      iex&gt; change_announcement(announcement)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>97</td>
+                        <td class='hits'></td>
+                        <td class='source'>      %Ecto.Changeset{source: %Announcement{}}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>98</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>99</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>100</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def change_announcement(%Announcement{} = announcement) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>101</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>    Announcement.changeset(announcement, %{})</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>102</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>103</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>

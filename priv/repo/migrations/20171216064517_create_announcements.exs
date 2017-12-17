@@ -5,7 +5,7 @@ defmodule PhoenixIntercoolerTutorial.Repo.Migrations.CreateAnnouncements do
 
   def change do
     create table(:announcements) do
-      add :content, :text
+      add :content, :text, null: false, default: ""
 
       timestamps()
     end

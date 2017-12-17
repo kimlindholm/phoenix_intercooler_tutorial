@@ -1,8 +1,11 @@
 defmodule PhoenixIntercoolerTutorial.Announcements.Announcement do
   use Ecto.Schema
   import Ecto.Changeset
-  alias PhoenixIntercoolerTutorial.Announcements.Announcement
+  alias __MODULE__
 
+  @moduledoc """
+  The Announcement schema.
+  """
 
   schema "announcements" do
     field :content, :string
