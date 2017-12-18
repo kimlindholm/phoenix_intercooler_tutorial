@@ -1,4 +1,6 @@
 defmodule PhoenixIntercoolerTutorial.ESpec.CustomHelpers do
+  alias PhoenixIntercoolerTutorial.Repo
+  import Ecto.Query
 
   @moduledoc """
   Custom helpers for ESpec.
@@ -18,6 +20,14 @@ defmodule PhoenixIntercoolerTutorial.ESpec.CustomHelpers do
         String.replace(acc, "%{#{key}}", to_string(value))
       end)
     end)
+  end
+
+  def last_record(model) do
+    Repo.one(from x in model, order_by: [desc: x.id], limit: 1)
+  end
+
+  def number_of_records(model) do
+    Repo.aggregate(model, :count, :id)
   end
 
 end
