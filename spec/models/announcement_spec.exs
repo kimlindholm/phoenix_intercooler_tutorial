@@ -1,6 +1,6 @@
 defmodule PhoenixIntercoolerTutorial.AnnouncementSpec do
-  use ESpec.Phoenix, model: PhoenixIntercoolerTutorial.Example, async: true
   alias PhoenixIntercoolerTutorial.Announcements.Announcement
+  use ESpec.Phoenix, model: Announcement, async: true
 
   let :params, do: params_for(:announcement)
   let :changeset, do: Announcement.changeset(%Announcement{}, params())
