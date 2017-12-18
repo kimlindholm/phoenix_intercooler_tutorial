@@ -4,7 +4,11 @@
 ESpec.configure fn(config) ->
   config.before fn(tags) ->
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixIntercoolerTutorial.Repo)
-    Ecto.Adapters.SQL.Sandbox.mode(PhoenixIntercoolerTutorial.Repo, {:shared, self()})
+
+    unless tags[:async] do
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixIntercoolerTutorial.Repo, {:shared, self()})
+    end
+
     {:shared, hello: :world, tags: tags}
   end
 
