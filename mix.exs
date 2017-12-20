@@ -45,6 +45,8 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
 
       # Code analysis
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
+      # Code documentation
+      {:inch_ex, "~> 0.5", only: [:dev, :test]},
       # Tests
       {:espec_phoenix, "~> 0.6.9", only: :test},
       # Test coverage reports
