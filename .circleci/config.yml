@@ -18,6 +18,7 @@ jobs:
       - run: mix espec --exclude feature
       - run: mix espec --only feature
       - run: mix coveralls.circle
+      - run: mix inch.report
       - store_artifacts:
           path: screenshots
           destination: screenshots
