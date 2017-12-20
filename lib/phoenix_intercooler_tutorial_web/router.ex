@@ -1,6 +1,7 @@
 defmodule PhoenixIntercoolerTutorialWeb.Router do
   use PhoenixIntercoolerTutorialWeb, :router
 
+  @doc false
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session

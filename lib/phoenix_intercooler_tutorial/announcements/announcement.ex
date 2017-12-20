@@ -1,7 +1,7 @@
 defmodule PhoenixIntercoolerTutorial.Announcements.Announcement do
   use Ecto.Schema
   import Ecto.Changeset
-  alias __MODULE__
+  alias PhoenixIntercoolerTutorial.Announcements.{Announcement, Comment}
 
   @moduledoc """
   The Announcement schema.
@@ -9,6 +9,7 @@ defmodule PhoenixIntercoolerTutorial.Announcements.Announcement do
 
   schema "announcements" do
     field :content, :string
+    has_many :comments, Comment # foreign key: delete_all
 
     timestamps()
   end

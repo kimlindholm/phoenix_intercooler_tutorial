@@ -5,8 +5,7 @@ defmodule PhoenixIntercoolerTutorial.Announcements do
 
   import Ecto.Query, warn: false
   alias PhoenixIntercoolerTutorial.Repo
-
-  alias PhoenixIntercoolerTutorial.Announcements.Announcement
+  alias PhoenixIntercoolerTutorial.Announcements.{Announcement, Comment}
 
   @doc """
   Returns the list of announcements.
@@ -18,7 +17,9 @@ defmodule PhoenixIntercoolerTutorial.Announcements do
 
   """
   def list_announcements do
-    Repo.all(Announcement)
+    Announcement
+      |> Repo.all()
+      |> Repo.preload(:comments)
   end
 
   @doc """
@@ -35,10 +36,14 @@ defmodule PhoenixIntercoolerTutorial.Announcements do
       ** (Ecto.NoResultsError)
 
   """
-  def get_announcement!(id), do: Repo.get!(Announcement, id)
+  def get_announcement!(id) do
+    Announcement
+      |> Repo.get!(id)
+      |> Repo.preload(:comments)
+  end
 
   @doc """
-  Creates a announcement.
+  Creates an announcement.
 
   ## Examples
 
@@ -56,7 +61,7 @@ defmodule PhoenixIntercoolerTutorial.Announcements do
   end
 
   @doc """
-  Updates a announcement.
+  Updates an announcement.
 
   ## Examples
 
@@ -74,7 +79,7 @@ defmodule PhoenixIntercoolerTutorial.Announcements do
   end
 
   @doc """
-  Deletes a Announcement.
+  Deletes an announcement.
 
   ## Examples
 
@@ -102,19 +107,19 @@ defmodule PhoenixIntercoolerTutorial.Announcements do
     Announcement.changeset(announcement, %{})
   end
 
-  alias PhoenixIntercoolerTutorial.Announcements.Comment
-
   @doc """
-  Returns the list of comments.
+  Returns the list of comments for an announcement.
 
   ## Examples
 
-      iex> list_comments()
+      iex> list_comments(announcement)
       [%Comment{}, ...]
 
   """
-  def list_comments do
-    Repo.all(Comment)
+  def list_comments(%Announcement{} = announcement) do
+    Comment
+      |> where(announcement_id: ^announcement.id)
+      |> Repo.all()
   end
 
   @doc """
@@ -134,20 +139,21 @@ defmodule PhoenixIntercoolerTutorial.Announcements do
   def get_comment!(id), do: Repo.get!(Comment, id)
 
   @doc """
-  Creates a comment.
+  Creates a comment for an announcement.
 
   ## Examples
 
-      iex> create_comment(%{field: value})
+      iex> create_comment(announcement, %{field: value})
       {:ok, %Comment{}}
 
-      iex> create_comment(%{field: bad_value})
+      iex> create_comment(announcement, %{field: bad_value})
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_comment(attrs \\ %{}) do
+  def create_comment(%Announcement{} = announcement, attrs \\ %{}) do
+    attrs = Map.put(attrs, :announcement_id, announcement.id)
     %Comment{}
-    |> Comment.changeset(attrs)
+    |> Comment.create_changeset(attrs)
     |> Repo.insert()
   end
 
@@ -165,12 +171,12 @@ defmodule PhoenixIntercoolerTutorial.Announcements do
   """
   def update_comment(%Comment{} = comment, attrs) do
     comment
-    |> Comment.changeset(attrs)
+    |> Comment.update_changeset(attrs)
     |> Repo.update()
   end
 
   @doc """
-  Deletes a Comment.
+  Deletes a comment.
 
   ## Examples
 
@@ -195,6 +201,6 @@ defmodule PhoenixIntercoolerTutorial.Announcements do
 
   """
   def change_comment(%Comment{} = comment) do
-    Comment.changeset(comment, %{})
+    Comment.update_changeset(comment, %{})
   end
 end

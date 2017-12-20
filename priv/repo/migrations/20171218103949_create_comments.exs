@@ -5,8 +5,10 @@ defmodule PhoenixIntercoolerTutorial.Repo.Migrations.CreateComments do
 
   def change do
     create table(:comments) do
-      add :content, :text
-      add :announcement_id, references(:announcements, on_delete: :nothing)
+      add :content, :text, null: false, default: ""
+      add :announcement_id,
+          references(:announcements, on_delete: :delete_all),
+          null: false
 
       timestamps()
     end
