@@ -45,6 +45,9 @@ defmodule PhoenixIntercoolerTutorial.Mixfile do
 
       # Code analysis
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
+      # Code documentation
+      {:ex_doc, "~> 0.16", only: :dev, runtime: false},
+      {:inch_ex, "~> 0.5", only: [:dev, :test]},
       # Quick aliases for .iex.exs
       {:quick_alias, "~> 0.1.0"},
       # Tests

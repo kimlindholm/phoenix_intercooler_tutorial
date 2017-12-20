@@ -14,7 +14,6 @@ TBD
 
 TBD
 
-
 ## Demo App
 
 ### Requirements
@@ -65,6 +64,13 @@ Test coverage report is in file `cover/excoveralls.html`.
     $ mix credo
     $ scss-lint assets/css/
     $ cd assets && yarn eslint
+
+#### Documentation
+
+Generate project documentation and check its quality:
+
+    $ mix docs
+    $ mix inch
 
 ## License
 
